@@ -4,9 +4,9 @@ app=FastAPI()
 
 @app.get("/health",status_code=200)
 def health_check():
-    return {"Status":"Running"}
+    return {"status":"running"}
 
-app.get("/info",status_code=200)
+@app.get("/info",status_code=200)
 def information():
     return{"project": "BookmarkVault",
         "version": "1.0.0",
